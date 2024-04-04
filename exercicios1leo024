@@ -1,0 +1,63 @@
+// Exercícios para forEach
+// Fácil
+// 1
+let numeros = [1, 2, 3, 4, 5]
+numeros.forEach(numero => console.log(numero))
+
+// 2
+let strings = ['olá', 'mundo']
+strings.forEach(str => console.log(str.toUpperCase()))
+
+// Intermediário
+// 1
+let objetos = [{ nome: 'Leonardo', idade: 24 }, { nome: 'Luiz', idade: 51 }]
+objetos.forEach(obj => console.log(obj.nome))
+
+// 2
+let soma = 0;
+numeros.forEach(numero => soma += numero)
+console.log(soma)
+
+// Difícil
+// 1
+let matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+matriz.forEach(linha => {
+    let somaLinha = 0
+    linha.forEach(numero => somaLinha += numero)
+    console.log(somaLinha)
+})
+
+// 2
+let matrizNumeros = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+matrizNumeros.forEach(subArray => {
+    let maximo = Math.max(...subArray)
+    console.log(maximo)
+})
+
+// Exercícios para map
+// Fácil
+// 1
+let dobrados = numeros.map(numero => numero * 2)
+console.log(dobrados)
+
+// 2
+let maiusculas = strings.map(str => str.toUpperCase())
+console.log(maiusculas)
+
+// Intermediário
+// 1
+let nomes = objetos.map(obj => obj.nome)
+console.log(nomes)
+
+// 2
+let comprimentos = strings.map(str => str.length)
+console.log(comprimentos)
+
+// Difícil
+// 1
+let somas = matriz.map(linha => linha.reduce((a, b) => a + b, 0))
+console.log(somas)
+
+// 2
+let raizes = numeros.map(numero => Math.round(Math.sqrt(numero)))
+console.log(raizes)
